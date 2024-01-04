@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+import { getAuth, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 import { getFirestore,
   collection,
   getDocs,
@@ -29,7 +29,6 @@ import { getFirestore,
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore();
 export const auth = getAuth();
-export const signIn = signInWithPopup();
 export const googleAuthProvider = new GoogleAuthProvider();
 
 /**

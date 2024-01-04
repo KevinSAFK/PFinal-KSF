@@ -4,8 +4,9 @@ import {
     deleteTask,
     getTask,
     updateTask,
-    getTasks, auth, googleAuthProvider, signIn
+    getTasks, auth, googleAuthProvider
   } from "./firebase.js";
+  import { signInWithPopup } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
   
   const taskForm = document.getElementById("task-form");
   const tasksContainer = document.getElementById("tasks-container");
@@ -17,7 +18,7 @@ import {
 
   btnLoginGoogle.addEventListener("click", async () => {
     try {
-      await signIn(auth, googleAuthProvider); // Usar googleAuthProvider aquí
+      await signInWithPopup(auth, googleAuthProvider); // Usar googleAuthProvider aquí
       // El usuario ha iniciado sesión correctamente con Google.
       // Puedes realizar acciones adicionales aquí, como redirigir a una página después del inicio de sesión.
     } catch (error) {

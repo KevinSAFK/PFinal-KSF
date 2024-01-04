@@ -13,19 +13,20 @@
   <body class="bg-dark">
 
     <!-- Auth -->
+    <div class="card">
     <h1>Autenticación</h1>
-    <h1>Sesión</h1>
+    <h1 class="h4">Sesión</h1>
     <fieldset>
       <button id="btn-login-google" class="btn btn-primary">Iniciar sesión con Google</button>
-      <legend>Email</legend>
+      <legend>Email</legend><br>
       <output id="email"><progress max="100">Cargando…</progress></output>
     </fieldset>
     <fieldset>
       <legend>Nombre</legend>
       <output id="nombre"></output>
     </fieldset>
-    <figure><img id="avatar" alt="Avatar"></figure>
     <button type="button" onclick="terminaSesión()">Terminar Sesión</button>
+  </div>
 
     <!-- CRUD -->
     <div class="container p-4">
