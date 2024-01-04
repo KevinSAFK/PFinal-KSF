@@ -6,7 +6,7 @@ import {
     updateTask,
     getTasks, auth, googleAuthProvider
   } from "./firebase.js";
-  import { signInWithPopup, singOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+  import { signInWithPopup, signOut} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
   
   const taskForm = document.getElementById("task-form");
   const tasksContainer = document.getElementById("tasks-container");
