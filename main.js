@@ -26,11 +26,13 @@ import {
     }
   });
 
+const userNameDisplay = document.getElementById("userDisplay");
   // Añade un oyente para manejar cambios en la sesión (login/logout)
 auth.onAuthStateChanged((user) => {
   if (user) {
     // Usuario ha iniciado sesión
     console.log("Usuario ha iniciado sesión:", user.displayName);
+    userNameDisplay.innerText = `¡Hola, ${userName}!`;
     // Puedes realizar acciones adicionales para usuarios autenticados aquí
   } else {
     // Usuario ha cerrado sesión
